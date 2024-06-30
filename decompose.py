@@ -35,7 +35,7 @@ def decompose(question):
 
 # print(decompose('Are more people today related to Genghis Khan than Julius Caesar?'))
 
-test_set = json.load(open("../strategyqa_test.json","r", encoding="utf8"))
+test_set = json.load(open("./strategyqa_test.json","r", encoding="utf8"))
 
 for item in tqdm(test_set):
     if "decompositions" not in item:
