@@ -55,4 +55,4 @@ Each component of the system is contained within its own python script. Since th
 | 3   | [rerank.py](https://github.com/nurmybtw/lightweight-mdqa/blob/main/rerank.py)                       | `reranked_test_set.json`   |
 | 4   | [aggregate.py](https://github.com/nurmybtw/lightweight-mdqa/blob/main/aggregate.py)                 | `preds_test_set.json`      |
 
-After this, `preds_test_set.json` should be submitted to the [StrategyQA leaderboard](https://leaderboard.allenai.org/strategyqa/submissions/public) in order to evaluate it on the official test set (it is a closed test set).
+After this, `preds_test_set.json` should be submitted to the [StrategyQA leaderboard](https://leaderboard.allenai.org/strategyqa/submissions/public) in order to evaluate it on the official test set (it is a closed test set). Our result can be found [here](https://leaderboard.allenai.org/strategyqa/submission/cp8ambmq4uo7qe4e976g).
