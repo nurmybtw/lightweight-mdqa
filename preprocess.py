@@ -1,8 +1,10 @@
 import json
+import os
 
+os.makedirs('for_indexing')
 paragraphs = {}
-with open('./dataset/enwiki-20200511-cirrussearch-parasv2.jsonl', 'r') as full_corpus:
-    with open('./dataset/full_corpus_for_indexing.jsonl', 'w') as output:
+with open('./enwiki-20200511-cirrussearch-parasv2.jsonl', 'r') as full_corpus:
+    with open('./for_indexing/full_corpus_for_indexing.jsonl', 'w') as output:
         for i, line in enumerate(full_corpus):
             paragraph = json.loads(line)
             title = paragraph['title']
@@ -20,4 +22,4 @@ with open('./dataset/enwiki-20200511-cirrussearch-parasv2.jsonl', 'r') as full_c
                 'content': content
             }
 
-json.dump(paragraphs, open("./dataset/full_corpus_paragraphs.json", 'w'))
+json.dump(paragraphs, open("./full_corpus_paragraphs.json", 'w'))

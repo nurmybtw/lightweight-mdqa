@@ -38,4 +38,4 @@ class MXBAIReranker:
         embeddings = self.pooling(outputs, inputs, 'cls')
 
         similarities = cos_sim(embeddings[0], embeddings[1:])
-        return similarities.numpy()[0,:]
+        return similarities.numpy()[0,:].tolist()

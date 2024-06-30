@@ -1,5 +1,4 @@
 import json
-import os
 from models.openai import generate
 from tqdm import tqdm
 
@@ -65,7 +64,7 @@ def generate_answer(question, documents):
     }
 
 print('Loading test set...')
-test_set = json.load(open("./output/reranked_test_set.json",'r', encoding='utf8'))
+test_set = json.load(open("./reranked_test_set.json",'r', encoding='utf8'))
 print('Loaded test set')
 
 preds = {}
@@ -77,4 +76,4 @@ for item in tqdm(test_set):
         "paragraphs": [p['id'] for p in doc['documents']]
     }
 
-json.dump(preds, open("./output/preds_test_set.json", "w"))
+json.dump(preds, open("./preds_test_set.json", "w"))
