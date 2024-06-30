@@ -4,7 +4,7 @@ from tqdm import tqdm
 
 def generate_answer(question, documents):
     system_prompt = '''
-        For each example, use the documents to create an "Answer" and an "Explanation" to the "Question". Just answer yes or no. Give you answer in the following JSON format:
+        For each example, use the documents to create an "Answer" and an "Explanation" to the "Question". Just answer yes or no. Give you answer in the following JSON format (without ``json ```):
         {
             "explanation": <explanation>,
             "answer": <yes or no>

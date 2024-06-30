@@ -1,11 +1,11 @@
 import json
 from models.mxbai import MXBAIReranker
-import tqdm
+from tqdm import tqdm
 
 reranker = MXBAIReranker()
 
 data = json.load(open("./torerank_test_set.json",'r', encoding='utf8'))
-batch_size = 16
+batch_size = 8 # Adjust for your memory resources (RAM/VRAM)
 
 # Assign similarity scores
 for item in tqdm(data):

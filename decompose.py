@@ -4,7 +4,7 @@ from tqdm import tqdm
 
 def decompose(question):
     system_prompt = '''
-    Decompose a question in self-contained sub-questions that will help the system find the related evidence documents for answering the original question. Give the original question when no decomposition is needed. Answer in the following JSON format:
+    Decompose a question in self-contained sub-questions that will help the system find the related evidence documents for answering the original question. Give the original question when no decomposition is needed. Answer in the following JSON format (without ``json ```):
     {
         "decompositions": ['Decomposition 1', 'Decomposition 2', ...]
     }
@@ -35,7 +35,7 @@ def decompose(question):
 
 # print(decompose('Are more people today related to Genghis Khan than Julius Caesar?'))
 
-test_set = json.load(open("./strategyqa_test.json","r", encoding="utf8"))
+test_set = json.load(open("../strategyqa_test.json","r", encoding="utf8"))
 
 for item in tqdm(test_set):
     if "decompositions" not in item:

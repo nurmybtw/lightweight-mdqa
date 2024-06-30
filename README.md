@@ -12,10 +12,16 @@ conda install pytorch pytorch-cuda=11.8 -c pytorch -c nvidia
 pip install pyserini
 ```
 
-Then, you can install other packages:
+Then, you can install other packages running the following:
 
 ```bash
 pip install -r requirements.txt
+```
+
+or this command:
+
+```bash
+pip install numpy sentence_transformers transformers openai tqdm
 ```
 
 ## Dataset Setup
@@ -49,4 +55,4 @@ Each component of the system is contained within its own python script. Since th
 | 3   | [rerank.py](https://github.com/nurmybtw/lightweight-mdqa/blob/main/rerank.py)                       | `reranked_test_set.json`   |
 | 4   | [aggregate.py](https://github.com/nurmybtw/lightweight-mdqa/blob/main/aggregate.py)                 | `preds_test_set.json`      |
 
-After this, `preds_test_set.json` should be submitted to the [StrategyQA leaderboard](https://leaderboard.allenai.org/strategyqa/submissions/public) in order to evaluate it on the official test set (it is the closed test set).
+After this, `preds_test_set.json` should be submitted to the [StrategyQA leaderboard](https://leaderboard.allenai.org/strategyqa/submissions/public) in order to evaluate it on the official test set (it is a closed test set).
